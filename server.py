@@ -161,7 +161,7 @@ class DroneController:
 
         target_x = pose.position.x_val + dx
         target_y = pose.position.y_val - dy
-        target_z = pose.position.z_val + dz
+        target_z = pose.position.z_val - dz
         yaw = float(new_input.yaw) * YAW_DEG
         try:
             self.hako.moveToPosition(target_x, target_y, target_z, 2.0, yaw)
